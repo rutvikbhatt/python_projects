@@ -199,8 +199,8 @@ def main(input_array, start_area, end_area):
 
 
     # Find the closest start and end positions #here we can have a function which calculates which point is theoratically closest to the end point
-    closest_start = start_area_cells[0]  # Assume the first start is closest
-    closest_end = end_area_cells[0]  # Assume the first end is closest
+    #closest_start = start_area_cells[0]  # Assume the first start is closest
+    #closest_end = end_area_cells[0]  # Assume the first end is closest
 
 
     # Generate all possible paths and track the fastest one
@@ -247,8 +247,12 @@ def main(input_array, start_area, end_area):
     #pass
 
 
-# If input array is coming from a text file with a particular format
-with open('data.txt', 'r') as file:
+
+#-------------------------------------------------------------Input array/data area starts from below---------------------------------------------------------------------
+
+
+#----------------------------------------1. If input array is coming from a text file with a particular format-------------------------------------------------
+with open('data_test.txt', 'r') as file:
     array_from_file = []
     
     for line in file:    
@@ -276,8 +280,7 @@ with open('data.txt', 'r') as file:
 #print(array_from_file)
 
 
-
-#Sample input array (change this to any new input array to test)
+#----------------------------------------2. Sample input array (change this to any new input array to test)----------------------------------------------------
 # input_array = [
 #     [0, 0, 0, 0, 0, 0, 0, 0, 'x', 'x'],
 #     [0, 1, 1, 0, 0, 0, 0, 0, 0, 0],
@@ -301,6 +304,17 @@ with open('data.txt', 'r') as file:
 # print(type(input_array[0][1]))
 
 
+#----------------------------------------Define start and end areas--------------------------------------------------------
+
+#first_area_user_input = input("Enter starting functional area number: ")
+#second_area_user_input = input("Enter end functional area number: ")
+
+#start_area = int(first_area_user_input)
+#end_area = int(second_area_user_input)
+
+
+start_area = 1
+end_area = 2
 
 # Call the main function with your desired start and end area
-main(input_array, start_area=3, end_area=1)
+main(input_array, start_area, end_area)
